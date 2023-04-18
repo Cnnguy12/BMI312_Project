@@ -1,3 +1,20 @@
 # testing to see if this works 
+import pandas as pd
+import os
+import numpy as np
+from scipy.stats import chi2_contingency
+in_path =  "C:\\Users\\emily\\BMI312Pr_Input\\" 
+out_path = "C:\\Users\\emily\\BMI312Pr_Output\\" 
 
+os.getcwd()
+files = os.listdir(in_path) # if your work director is the location of the ouput you use './' instead of out_path
+files
+
+for f in files:
+    if (f.endswith('.xlsx')): 
+        print(f, '...')
+        df =  pd.read_excel(in_path+f)
+        print(df)
+        
+        
 ## please try and edit this patch 
